@@ -1,0 +1,102 @@
+/* Color palette */
+:root {
+  --black: #000000;
+  --red: #BB0000;
+  --red-dark: #922529;
+  --green: #006600;
+  --green-bright: #008C51;
+  --white: #FFFFFF;
+}
+
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Hero Section */
+/*.hero {
+  background: linear-gradient(135deg, var(--black), var(--red-dark));
+  min-height: 100vh;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}*/
+
+/* ...existing code... */
+.hero {
+  position: relative;
+  /* try the most likely paths first; adjust if your image is in a different folder */
+  background-image: url('../Images/heroimg2.png'), url('images/heroimg2.png'),  url('heroimg2.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--black); /* fallback while image loads */
+  min-height: 80vh; /* change to 100vh if you want a full-screen hero */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: var(--white);
+  overflow: hidden;
+}
+/* For mobile devices */
+@media (max-width: 768px) {
+  .hero {
+    background-image: url('images/mobile-heroimg2.png'), url('../Images/mobile-heroimg2.png'), url('mobile-heroimg2.png');
+  }
+}
+
+/* subtle dark overlay so white text is readable on any image */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.25));
+  z-index: 0;
+}
+
+/* ensure hero content sits above the overlay */
+.hero > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ...existing code... */
+
+
+/* Tickets Section */
+.tickets {
+  background: linear-gradient(135deg, var(--green), var(--black));
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--red);
+  border: none;
+}
+.btn-primary:hover {
+  background-color: var(--green-bright);
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+  .social-icons a {
+      color: #333; /* default color */
+      margin-right: 15px;
+      transition: color 0.3s ease;
+    }
+    .social-icons a:hover {
+      color: #0d6efd; /* Bootstrap primary blue */
+    }
+
+/* Footer */
+footer {
+  background-color: var(--black);
+}
