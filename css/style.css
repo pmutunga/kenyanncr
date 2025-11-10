@@ -25,7 +25,7 @@ body {
 .hero {
   position: relative;
   /* try the most likely paths first; adjust if your image is in a different folder */
-  background-image: url('../Images/heroimg2.png'), url('images/heroimg2.png'),  url('heroimg2.png');
+  background-image: url('../images/heroimg2.png'), url('../Images/heroimg2.png'), url('heroimg2.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -42,7 +42,7 @@ body {
 /* For mobile devices */
 @media (max-width: 768px) {
   .hero {
-    background-image: url('images/mobile-heroimg2.png'), url('../Images/mobile-heroimg2.png'), url('mobile-heroimg2.png');
+    background-image: url('../images/mobile-heroimg2.png'), url('../Images/mobile-heroimg2.png'), url('mobile-heroimg2.png');
   }
 }
 
